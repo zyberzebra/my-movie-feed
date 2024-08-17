@@ -18,9 +18,10 @@ jobs:
       uses: actions/setup-java@v4.2.2
       with:
         java-version: '17'
+        distribution: 'temurin'
     
     - name: Run Kotlin Script
-      run: kotlinc -script rss-to-html.kts
+      run: kotlinc -script letterboxdFeedFetcher.kts
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
